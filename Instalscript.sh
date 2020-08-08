@@ -74,14 +74,20 @@ otro_fun () {
 	echo "OK SELECCIONO “ OTRO"
 }
 	echo -e "\033[1;31m           --¿QUE UBUNTU ESTA UTILIZANDO?--"
-	echo -e "\033[1;33m  Digite el numero segun respuesta: "
+	
     msg -bar
-    echo -e "\033[1;33m Escoja la opcion deseada."
+    echo -e "\033[1;32m Escoja la opcion deseada digitando el numero segun corresponda."
+
     msg -bar
+
     echo " 1).- Ubuntu 16.04 "
+
     echo " 2).- Ubuntu 18.04 "
+
     echo " 3).- Otro "
+
 	msg -bar
+
 	echo -n "Digite el numero segun respuesta: "
     read opcao
     case $opcao in
