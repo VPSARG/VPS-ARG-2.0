@@ -41,7 +41,7 @@ mkdir -p "/etc/vpsargup/"
 if [ ! -d "$INSTALL_DIR" ]; then
 echo ""
 echo ""
-	echo -e  "\033[1;33m            Ejecutando Paquetes Esenciales"
+	echo -e  "\033[1;33m          Ejecutando Paquetes Esenciales"
 	echo "============================================================"
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
@@ -58,7 +58,7 @@ echo ""
 echo ""
 
 echo ""
-	echo -e  "\033[1;36m             Configurando Instalador Interno "
+	echo -e  "\033[1;36m          Configurando Instalador Interno "
 	
 	echo "--------------------------------------------------------------"	
 echo ""
