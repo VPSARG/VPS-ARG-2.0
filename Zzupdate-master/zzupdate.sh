@@ -197,14 +197,13 @@ msg -bar2
 echo -e "\033[93m           -- ACTUALIZACIONES CASI COMPLETAS -- "
 echo -e "\033[97m  SU VPS SE REINICIARA PARA FINALIZAR ACTUALIZACIONES"
 msg -bar2
-echo -e "\033[93m      CUANDO INICIE SU VPS DE NUEVO SOLO"
-echo -e "\033[93m                 DIGITE LA PALABRA\033[97m"
+echo -e "\033[93m      CUANDO INICIE SU VPS DIGITE LA PALABRA\033[97m"
 echo ""
-echo -e "\033[1;41m                     sudo VPS-ARG                      \033[0;37m"
+echo -e "\033[1;41m                      VPS-ARG                      \033[0;37m"
 wget https://github.com/VPS-ARG/VPS-ARG-2.0/blob/master/VPS-ARG.sh -O /usr/bin/VPS-ARG &> /dev/null
 chmod +x /usr/bin/VPS-ARG
 if [ "$REBOOT" = "1" ]; then
-	printTitle "        SU VPS SE REINICIARA EN 15 SEGUNDOS           "
+	printTitle "        SU VPS REINICIARA EN 15 SEGUNDOS           "
 	
 	while [ $REBOOT_TIMEOUT -gt 0 ]; do
 	   echo -ne "                         -$REBOOT_TIMEOUT-\033[0K\r"
