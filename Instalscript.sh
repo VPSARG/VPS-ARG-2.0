@@ -29,7 +29,6 @@ echo ""
 
 echo ""
  echo -e  "\033[1;31m        ============= ACTUALIZADORES  =============\033[1;31m "
- msg -bar2
 ## Script name
 SCRIPT_NAME=vpsargup
 ## Install directory
@@ -40,6 +39,9 @@ INSTALL_DIR=${INSTALL_DIR_PARENT}${SCRIPT_NAME}/
 mkdir -p "/etc/vpsargup/"
 ## Install/update
 if [ ! -d "$INSTALL_DIR" ]; then
+
+echo ""
+
 	echo -e  "\033[1;33m                   Paquetes Esenciales"
 	echo "============================================================"
 	sleep 2
@@ -57,7 +59,8 @@ if [ ! -d "$INSTALL_DIR" ]; then
 	
 	echo "--------------------------------------------------------------"	
 	
-	msg -bar2
+echo ""
+
 	sleep 2
 else
 	echo ""
