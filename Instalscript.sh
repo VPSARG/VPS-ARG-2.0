@@ -23,7 +23,12 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
 }
 clear
  msg -bar2
+    echo ""
+
  msg -ama "     [ VPS-ARGENTO \033[1;36m 🔹by @Pablo_Ezekiel🔹\033[1;36m ]"
+
+ echo ""
+
  echo -e  "\033[1;31m        ============= ACTUALIZADORES  =============\033[1;31m "
  msg -bar2
 ## Script name
@@ -36,7 +41,7 @@ INSTALL_DIR=${INSTALL_DIR_PARENT}${SCRIPT_NAME}/
 mkdir -p "/etc/vpsargup/"
 ## Install/update
 if [ ! -d "$INSTALL_DIR" ]; then
-	echo -e  "\033[1;32m                   Paquetes Esenciales"
+	echo -e  "\033[1;33m                   Paquetes Esenciales"
 	echo "============================================================"
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
