@@ -218,11 +218,11 @@ echo "exit 0" >> /etc/rc.local
 /bin/cp /etc/skel/.bashrc ~/
 echo 'clear' >> .bashrc
 echo 'echo ""' >> .bashrc
-echo 'echo -e "\033[91m      __          ______    ____           _      ____      ____   " '>> .bashrc
-echo 'echo -e "\033[91m      \ \       / /     _ \ /  ___|      /  \   |  _   \  /  ___|  " '>> .bashrc
-echo 'echo -e "\033[91m        \ \    / / |   |_)  \___  \ ___ / __ \  | |__) | |   ___   " '>> .bashrc
-echo 'echo -e "\033[91m          \  V /   |    __/ ___)   |___/ /__\ \ |    _<  |  |_| |  " '>> .bashrc
-echo 'echo -e "\033[91m            \_/     |__|    |____/    /_/     \_\_|   \_\ \_____/  " '>> .bashrc
+echo 'echo -e "\033[91m        __     ______    ____        _      ____      ____   " '>> .bashrc
+echo 'echo -e "\033[91m        \ \   / /   _ \/  ___|      /  \   |  _  \  /  ___|  " '>> .bashrc
+echo 'echo -e "\033[91m         \ \ / / | |_) \___  \ __  / __ \  | |__) ||   ___   " '>> .bashrc
+echo 'echo -e "\033[91m          \ V /  |   __/ ___) |___/ /__\ \ |   _<  |  |_| |  " '>> .bashrc
+echo 'echo -e "\033[91m           \_/   |__|  |_____/   /_/     \_\_|  \_\ \_____/  " '>> .bashrc
 echo 'echo "" '>> .bashrc
 echo 'mess1="$(less /etc/newadm/message.txt)" ' >> .bashrc
 echo 'echo "" '>> .bashrc
