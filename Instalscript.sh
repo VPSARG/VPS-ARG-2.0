@@ -54,6 +54,10 @@ echo ""
 	rm -rf /usr/bin/vpsargup
     wget https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Zzupdate-master/zzupdate.sh -O /usr/bin/vpsargup &> /dev/null
 	chmod +x /usr/bin/vpsargup
+
+echo ""
+
+echo ""
 	echo -e  "\033[1;36m                   Instalador Interno "
 	
 	echo "--------------------------------------------------------------"	
