@@ -18,13 +18,13 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
   -azu)cor="${MAG}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -verd)cor="${VERDE}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -bra)cor="${VERMELHO}" && echo -ne "${cor}${2}${SEMCOR}";;
-  "-bar2"|"-bar")cor="$MAGENTA}======================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
+  "-bar2"|"-bar")cor="$AMARELO}==============================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
 clear
  msg -bar2
  msg -ama "     [ VPS-ARGENTO \033[1;36m 🔹by @Pablo_Ezekiel🔹\033[1;36m ]"
- echo -e  "\033[7;31m  ============= ACTUALIZADORES  =============\033[1;31m "
+ echo -e  "\033[1;31m        ============= ACTUALIZADORES  =============\033[1;31m "
  msg -bar2
 ## Script name
 SCRIPT_NAME=vpsargup
@@ -36,8 +36,8 @@ INSTALL_DIR=${INSTALL_DIR_PARENT}${SCRIPT_NAME}/
 mkdir -p "/etc/vpsargup/"
 ## Install/update
 if [ ! -d "$INSTALL_DIR" ]; then
-	echo -e  "\033[1;34m                   Paquetes Esenciales"
-	echo "========================================================"
+	echo -e  "\033[1;32m                   Paquetes Esenciales"
+	echo "============================================================"
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
 	cd "$INSTALL_DIR_PARENT"
@@ -61,22 +61,22 @@ fi
 
 ubu16_fun () {
     wget -O /etc/apt/sources.list https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Repositorios/16.04/sources.list &> /dev/null
-	echo -e "\033[3;97m SELECCIONO “ UBUNTU 16"
+	echo -e "\033[1;33m SELECCIONO “ UBUNTU 16"
 }
 
 ubu18_fun () {
     wget -O /etc/apt/sources.list https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Repositorios/18.04/sources.list &> /dev/null
-	echo -e "\033[3;97m SELECCIONO “ UBUNTU 18"
+	echo -e "\033[1;33m SELECCIONO “ UBUNTU 18"
 }	
 
 otro_fun () {
     
 	echo "OK SELECCIONO “ OTRO"
 }
-	echo -e "\033[1;34m           --¿QUE UBUNTU ESTA UTILIZANDO?--"
-	echo -e "\033[1;34m  Digite el numero segun respuesta: "
+	echo -e "\033[1;31m           --¿QUE UBUNTU ESTA UTILIZANDO?--"
+	echo -e "\033[1;33m  Digite el numero segun respuesta: "
     msg -bar
-    echo -e "\033[1;34m Escoja la opcion deseada."
+    echo -e "\033[1;33m Escoja la opcion deseada."
     msg -bar
     echo " 1).- Ubuntu 16.04 "
     echo " 2).- Ubuntu 18.04 "
