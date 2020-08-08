@@ -39,9 +39,8 @@ INSTALL_DIR=${INSTALL_DIR_PARENT}${SCRIPT_NAME}/
 mkdir -p "/etc/vpsargup/"
 ## Install/update
 if [ ! -d "$INSTALL_DIR" ]; then
-
 echo ""
-
+echo ""
 	echo -e  "\033[1;33m                   Paquetes Esenciales"
 	echo "============================================================"
 	sleep 2
@@ -58,9 +57,7 @@ echo ""
 	echo -e  "\033[1;36m                   Instalador Interno "
 	
 	echo "--------------------------------------------------------------"	
-	
 echo ""
-
 	sleep 2
 else
 	echo ""
@@ -82,7 +79,7 @@ otro_fun () {
 }
 	echo -e "\033[1;31m           --¿QUE UBUNTU ESTA UTILIZANDO?--"
 	
-    msg -bar
+echo ""
     echo -e "\033[1;32m Escoja la opcion deseada digitando el numero segun corresponda."
 
     msg -bar
