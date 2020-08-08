@@ -177,21 +177,21 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 [[ "$MIP" != "$MIP2" ]] && IP="$MIP2" || IP="$MIP"
 }  
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Control-IP?token=AQD3IKIL4Z6IQQWOJFFGLY27F3SXU")
+  permited=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   echo -e "\n\n\n\033[1;95m======================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! CONTACTE A @Pablo_Ezekiel\n======================================================\n"
   [[ -d /etc/newadm ]] && rm -rf /etc/newadm
   exit 1
   } || {
   ### INSTALAR VERCION DE SCRIPT
-  v1=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version?token=AQD3IKK65GACWKGUOTC62627F2L2S")
+  v1=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version")
   echo "$v1" > /etc/versin_script
   }
 }
 funcao_idioma () {
 msg -bar2
 figlet "    -VPS ARG-" | lolcat 
-echo -e "     ESTE SCRIPT ESTA OPTIMIZADO A IDIOMA ESPAÑOL"
+echo -e "        SCRIPT OPTIMIZADO A IDIOMA ESPAÑOL"
 msg -bar2
 pv="$(echo es)"
 [[ ${#id} -gt 2 ]] && id="es" || id="$pv"
@@ -199,15 +199,15 @@ byinst="true"
 }
 install_fim () {
 msg -ama "               Finalizando Instalacion" && msg bar2
-[[ $(find /etc/newadm/ger-user -name nombre.log|grep -w "nombre.log"|head -1) ]] || wget -O /etc/newadm/ger-user/nombre.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/nombre.log?token=AQD3IKL2MU3PURX23AQZR6K7F2NH4 &>/dev/null
+[[ $(find /etc/newadm/ger-user -name nombre.log|grep -w "nombre.log"|head -1) ]] || wget -O /etc/newadm/ger-user/nombre.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/nombre.log &>/dev/null
 [[ $(find /etc/newadm/ger-user -name IDT.log|grep -w "IDT.log"|head -1) ]] || wget -O /etc/newadm/ger-user/IDT.log https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/ArchivosUtilitarios/IDT.log &>/dev/null
-[[ $(find /etc/newadm/ger-user -name tiemlim.log|grep -w "tiemlim.log"|head -1) ]] || wget -O /etc/newadm/ger-user/tiemlim.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/tiemlim.log?token=AQD3IKO4EI3YZT7JDUR6PNK7F2M7S &>/dev/null
+[[ $(find /etc/newadm/ger-user -name tiemlim.log|grep -w "tiemlim.log"|head -1) ]] || wget -O /etc/newadm/ger-user/tiemlim.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/tiemlim.log &>/dev/null
 
-wget -O /bin/rebootnb https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/rebootnb?token=AQD3IKLGDMQNOSYWSCJBJMK7F2MM6 &> /dev/null
+wget -O /bin/rebootnb https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/rebootnb &> /dev/null
 chmod +x /bin/rebootnb 
-wget -O /bin/resetsshdrop https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/resetsshdrop?token=AQD3IKKPVHSL7HWTYHSALVC7F2M2E &> /dev/null
+wget -O /bin/resetsshdrop https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/resetsshdrop &> /dev/null
 chmod +x /bin/resetsshdrop
-wget -O /etc/versin_script_new https://raw.githhttps://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version?token=AQD3IKK65GACWKGUOTC62627F2L2Subusercontent.com/VPS-MX/VPS-MX-8.0/master/Vercion &>/dev/null
+wget -O /etc/versin_script_new https://raw.githhttps://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null
 msg -bar2
 echo '#!/bin/sh -e' > /etc/rc.local
 sudo chmod +x /etc/rc.local
@@ -218,21 +218,21 @@ echo "exit 0" >> /etc/rc.local
 /bin/cp /etc/skel/.bashrc ~/
 echo 'clear' >> .bashrc
 echo 'echo ""' >> .bashrc
-echo 'echo -e "\033[91m      __          ______    ____              _         ____       ____    " '>> .bashrc
-echo 'echo -e "\033[91m      \ \       / /     _ \ /  ___|           /    \     |    _   \  /   ___ |  " '>> .bashrc
-echo 'echo -e "\033[91m        \ \    / / |   |_)  \___  \ ___  /  __  \   |   |__)  |    |  ___  " '>> .bashrc
-echo 'echo -e "\033[91m          \  V /   |    __/ ___)   |___/  /__\  \ |    _   < |    |_|    | " '>> .bashrc
-echo 'echo -e "\033[91m            \_/     |__|    |____/      /_/        \_\_|   \_\ \_____/. " '>> .bashrc
+echo 'echo -e "\033[91m      __          ______    ____           _      ____      ____   " '>> .bashrc
+echo 'echo -e "\033[91m      \ \       / /     _ \ /  ___|      /  \   |  _   \  /  ___|  " '>> .bashrc
+echo 'echo -e "\033[91m        \ \    / / |   |_)  \___  \ ___ / __ \  | |__) | |   ___   " '>> .bashrc
+echo 'echo -e "\033[91m          \  V /   |    __/ ___)   |___/ /__\ \ |    _<  |  |_| |  " '>> .bashrc
+echo 'echo -e "\033[91m            \_/     |__|    |____/    /_/     \_\_|   \_\ \_____/  " '>> .bashrc
 echo 'echo "" '>> .bashrc
 echo 'mess1="$(less /etc/newadm/message.txt)" ' >> .bashrc
 echo 'echo "" '>> .bashrc
 echo 'echo -e "\033[92m        MENSAJE : $mess1 "'>> .bashrc
 echo 'echo "" '>> .bashrc                                               
-echo 'echo -e "\033[97m   PARA VISUALIZAR PANEL ESCRIBA:  sudo menu "'>> .bashrc
+echo 'echo -e "\033[97m   PARA VISUALIZAR PANEL ESCRIBA:   menu "'>> .bashrc
 echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version?token=AQD3IKK65GACWKGUOTC62627F2L2S &>/dev/null'>> .bashrc
 echo 'echo ""'>> .bashrc
 echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
-echo -e "\033[1;41m                     sudo menu                        \033[0;37m" && msg -bar2
+echo -e "\033[1;41m                      menu                        \033[0;37m" && msg -bar2
 sleep 5
 }
 ofus () {
@@ -315,12 +315,12 @@ curl -s --max-time 10 -d "chat_id=$IDB2&disable_web_page_preview=1&text=$MSG" $U
 echo -e "\033[1;34mSE ENVIO MENSAJE  SI NO LLEGA CONTACTE A @Pablo_Ezekiel "
 }
 fun_ip
-wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/trans?token=AQD3IKOX57PLP5KODPKOYEC7F3RGG &> /dev/null
-wget -O /bin/Desbloqueo.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Desbloqueo.sh?token=AQD3IKPEZRIMQ77MS6AICX27F3P4A &> /dev/null
+wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/trans &> /dev/null
+wget -O /bin/Desbloqueo.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Desbloqueo.sh &> /dev/null
 chmod +x /bin/Desbloqueo.sh
-wget -O /bin/monitor-b.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/Monitor-b.sh?token=AQD3IKLKOZXDX5PD7JJXYLS7F3QBK &> /dev/null
+wget -O /bin/monitor-b.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/Monitor-b.sh &> /dev/null
 chmod +x /bin/monitor-b.sh
-wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/estilos.css?token=AQD3IKO7WPZQTCLA4UAUKMS7F3QUY &> /dev/null
+wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/estilos.css &> /dev/null
 msg -bar2
 msg -bar2
 msg -ama "     [ SCRIPT | VPS-ARGENTO \033[1;97m 📲 By @Pablo_Ezekiel📲 \033[1;33m ]"
