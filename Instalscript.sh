@@ -23,12 +23,11 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
 }
 clear
  msg -bar2
-    echo ""
+echo ""
 
  msg -ama "     [ VPS-ARGENTO \033[1;36m 🔹by @Pablo_Ezekiel🔹\033[1;36m ]"
 
- echo ""
-
+echo ""
  echo -e  "\033[1;31m        ============= ACTUALIZADORES  =============\033[1;31m "
  msg -bar2
 ## Script name
