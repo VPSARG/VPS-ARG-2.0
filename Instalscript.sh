@@ -24,7 +24,7 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
 clear
  msg -bar2
  msg -ama "     [ VPS-ARGENTO \033[1;36m 🔹by @Pablo_Ezekiel🔹\033[1;36m ]"
- echo -e  "\033[3;34m  ============= ACTUALIZADORES  =============\033[1;34m "
+ echo -e  "\033[7;31m  ============= ACTUALIZADORES  =============\033[1;31m "
  msg -bar2
 ## Script name
 SCRIPT_NAME=vpsargup
@@ -37,7 +37,7 @@ mkdir -p "/etc/vpsargup/"
 ## Install/update
 if [ ! -d "$INSTALL_DIR" ]; then
 	echo -e  "\033[1;34m                   Paquetes Esenciales"
-	echo "====================================="
+	echo "========================================================"
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
 	cd "$INSTALL_DIR_PARENT"
@@ -49,9 +49,9 @@ if [ ! -d "$INSTALL_DIR" ]; then
 	rm -rf /usr/bin/vpsargup
     wget https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Zzupdate-master/zzupdate.sh -O /usr/bin/vpsargup &> /dev/null
 	chmod +x /usr/bin/vpsargup
-	echo -e  "\033[1;36m                 Instalador Interno "
+	echo -e  "\033[1;36m                   Instalador Interno "
 	
-	echo "---------------------------------------------------"	
+	echo "--------------------------------------------------------------"	
 	
 	msg -bar2
 	sleep 2
@@ -73,8 +73,8 @@ otro_fun () {
     
 	echo "OK SELECCIONO “ OTRO"
 }
-	echo -e "\033[1;3;34m           --¿QUE UBUNTU ESTA UTILIZANDO?--"
-	echo -e "\033[4;34m  Digite el numero segun respuesta: "
+	echo -e "\033[1;34m           --¿QUE UBUNTU ESTA UTILIZANDO?--"
+	echo -e "\033[1;34m  Digite el numero segun respuesta: "
     msg -bar
     echo -e "\033[1;34m Escoja la opcion deseada."
     msg -bar
