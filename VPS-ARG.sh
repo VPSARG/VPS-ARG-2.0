@@ -231,11 +231,11 @@ echo 'mess1="$(less /etc/newadm/message.txt)" ' >> .bashrc
 echo 'echo "" '>> .bashrc
 echo 'echo -e "\033[92m        MENSAJE : $mess1 "'>> .bashrc
 echo 'echo "" '>> .bashrc                                               
-echo 'echo -e "\033[97m   PARA INGRESO AL PANEL ESCRIBA: sudo vps  "'>> .bashrc
+echo 'echo -e "\033[97m   PARA INGRESO AL PANEL ESCRIBA: menu  "'>> .bashrc
 echo 'wget -O /etc/version_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null'>> .bashrc
 echo 'echo ""'>> .bashrc
 echo -e "         COMANDO PRINCIPAL DE INGRESO AL PANEL "
-echo -e "\033[1;41m                  sudo vps                        \033[0;37m" && msg -bar2
+echo -e "\033[1;41m                  menu                       \033[0;37m" && msg -bar2
 sleep 5
 }
 ofus () {
