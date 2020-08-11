@@ -14,7 +14,7 @@ myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 mkdir -p /etc/B-ADMuser &>/dev/null
 rm -rf /etc/localtime &>/dev/null
-ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime &>/dev/null
+ln -s /usr/share/zoneinfo/America/Argentina_City /etc/localtime &>/dev/null
 rm $(pwd)/$0 &> /dev/null
 ### COLORES Y BARRA 
 msg () {
@@ -32,7 +32,9 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
 }
 ### PAQUETES PRINCIPALES 
 msg -bar
-echo -e "\033[92m -- INSTALANDO PAQUETES NECESARIOS -- "
+echo ""
+echo -e "\033[92m -- INSTALANDO CONFIGURACIONES ESENCIALES -- "
+echo ""
 msg -bar
 apt-get install grep -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "grep"|head -1) ]] || ESTATUS=`echo -e "\033[91mFALLO DE INSTALACION"` &>/dev/null
@@ -135,7 +137,7 @@ clear
 ### FIXEADOR PARA SISTEMAS 86_64
 idfix64_86 () {
 msg -bar2
-echo -e "EN CASO DE PEDIR ALGUNA INSTALACION ESCOJA: y "
+echo -e "SI SUGIERE INSTALACION DE OTRO PAQUETE ESCOJA: y "
 apt-get update; apt-get upgrade 
 apt-get install curl
 apt-get install lsof
@@ -161,12 +163,13 @@ export LANGUAGE=en_US.UTF-8\
 clear
 }
 msg -bar2
-echo -e "\033[1;97m     ¿APLICAR PARCHE PARA CORREGIR ERRORES?" 
+echo -e "\033[1;97m <= SI OBTUVO ERRORES DE INSTALACION APLIQUE EL PARCHE =>" 
 msg -bar2
 echo -e "\033[1;32m 1- Escoja:(N) Para Instalacion Normal"
-echo -e "\033[1;31m 2- Escoja:(S) Si ya intento instalar el script y\n presento errores, aplique este parche."
+echo -e "\033[1;31m 2- Escoja:(S) Si ya intento instalar el script y\n presento errores."
 msg -bar2
 echo -e "\033[1;39m Al presionar N continuara la instalacion Normalmente"
+echo ""
 msg -bar2
 read -p " [ S | N ]: " idfix64_86   
 [[ "$idfix64_86" = "s" || "$idfix64_86" = "S" ]] && idfix64_86
@@ -207,7 +210,7 @@ wget -O /bin/rebootnb https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-Archi
 chmod +x /bin/rebootnb 
 wget -O /bin/resetsshdrop https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/resetsshdrop &> /dev/null
 chmod +x /bin/resetsshdrop
-wget -O /etc/versin_script_new https://raw.githhttps://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null
+wget -O /etc/version_script_new https://raw.githhttps://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null
 msg -bar2
 echo '#!/bin/sh -e' > /etc/rc.local
 sudo chmod +x /etc/rc.local
@@ -228,11 +231,11 @@ echo 'mess1="$(less /etc/newadm/message.txt)" ' >> .bashrc
 echo 'echo "" '>> .bashrc
 echo 'echo -e "\033[92m        MENSAJE : $mess1 "'>> .bashrc
 echo 'echo "" '>> .bashrc                                               
-echo 'echo -e "\033[97m   PARA VISUALIZAR PANEL ESCRIBA:   menu "'>> .bashrc
-echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null'>> .bashrc
+echo 'echo -e "\033[97m   PARA INGRESO AL PANEL ESCRIBA:  vps menu "'>> .bashrc
+echo 'wget -O /etc/version_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null'>> .bashrc
 echo 'echo ""'>> .bashrc
-echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
-echo -e "\033[1;41m                      menu                        \033[0;37m" && msg -bar2
+echo -e "         COMANDO PRINCIPAL DE INGRESO AL PANEL "
+echo -e "\033[1;41m                  vps menu                        \033[0;37m" && msg -bar2
 sleep 5
 }
 ofus () {
@@ -288,7 +291,7 @@ NOTIFY () {
 msg -bar
 msg -ama " Noti-BOT (Notificaciones Varias)| VPS-ARGENTO | de @Pablo_Ezekiel "
 msg -bar
-echo -e "\033[1;94m Una opcion para notificar cuando\n un usuario sea bloquedo, expirado, e info de VPS."
+echo -e "\033[1;94m Una opcion para notificar cuando\n un usuario sea bloqueado, expirado, e info de VPS."
 echo -e "\033[1;97m Debe usar el BOT de Telegram @NotiBot_VpsArgento_bot"
 echo -e "\033[1;92m Para sacar su ID solo utilice el comando /MENU en el BOT @VPS_ARGENTO_BOT"
 echo -e "\033[1;92m Aparecera un pequeño menu donde mostrara su  👤 ID"
@@ -324,7 +327,6 @@ wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/VPSARG/VPS-A
 msg -bar2
 msg -bar2
 msg -ama "     [ SCRIPT | VPS-ARGENTO \033[1;97m 📲 By @Pablo_Ezekiel📲 \033[1;33m ]"
-msg -ama "  \033[1;96m      🔹 Preferentemente usar Ubuntu 18 a 64 🔹"
 msg -bar2
 [[ $1 = "" ]] && funcao_idioma || {
 [[ ${#1} -gt 2 ]] && funcao_idioma || id="$1"
