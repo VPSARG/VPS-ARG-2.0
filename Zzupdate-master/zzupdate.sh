@@ -60,7 +60,7 @@ if ! [ $(id -u) = 0 ]; then
 
 		printTitle "How to fix it?"
 		echo "Debe Ejecutar el script así:"
-		echo "sudo $SCRIPT_NAME"
+		echo "$SCRIPT_NAME"
 
 		printTitle "The End"
 		echo $(date)
@@ -72,7 +72,7 @@ fi
 if [ ! -z "$1" ]; then
 
 	CONFIGFILE_PROFILE_NAME=${SCRIPT_NAME}.profile.${1}.conf
-	CONFIGFILE_PROFILE_FULLPATH_ETC=/etc/vpsmxup/$CONFIGFILE_PROFILE_NAME
+	CONFIGFILE_PROFILE_FULLPATH_ETC=/etc/vpsargup/$CONFIGFILE_PROFILE_NAME
 	CONFIGFILE_PROFILE_FULLPATH_DIR=${SCRIPT_DIR}$CONFIGFILE_PROFILE_NAME
 
 	if [ ! -f "$CONFIGFILE_PROFILE_FULLPATH_ETC" ] && [ ! -f "$CONFIGFILE_PROFILE_FULLPATH_DIR" ]; then
@@ -114,8 +114,6 @@ if [ "$SCRIPT_HASH" != "$SCRIPT_HASH_AFTER_UPDATE" ]; then
 		echo "vvvvvvvvvvvvvvvvvvvvvv"
 		echo "Self-update installed!"
 		echo "^^^^^^^^^^^^^^^^^^^^^^"
-		echo "zzupdate itself has been updated!"
-		echo "Please run zzupdate again to update your system."
 
 		printTitle "The End"
 		echo $(date)
@@ -147,7 +145,7 @@ apt-get dist-upgrade -y
 
 if [ "$VERSION_UPGRADE" = "1" ] && [ "$VERSION_UPGRADE_SILENT" = "1" ]; then
 
-	printTitle "Actualice silenciosamente a una nueva versión, si la hay"
+	printTitle "Actualice silenciosamente a una nueva versión, si hubiera"
 	do-release-upgrade -f DistUpgradeViewNonInteractive
 	
 elif [ "$VERSION_UPGRADE" = "1" ] && [ "$VERSION_UPGRADE_SILENT" = "0" ]; then
@@ -197,7 +195,7 @@ msg -bar2
 echo -e "\033[93m           -- ACTUALIZACIONES CASI COMPLETAS -- "
 echo -e "\033[97m  SU VPS SE REINICIARA PARA FINALIZAR ACTUALIZACIONES"
 msg -bar2
-echo -e "\033[93m      CUANDO INICIE SU VPS DIGITE LA PALABRA\033[97m"
+echo -e "\033[93m      CUANDO REINICIE SU VPS DIGITE LA PALABRA\033[97m"
 echo ""
 echo -e "\033[1;41m                      VPS-ARG                      \033[0;37m"
 wget https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/VPS-ARG.sh -O /usr/bin/VPS-ARG &> /dev/null
