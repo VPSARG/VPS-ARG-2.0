@@ -14,7 +14,7 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
   "-bar2"|"-bar")cor="$MAGENTA}======================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
-rm -rf instalscript.sh
+rm -rf Instalscript.sh
 ## Script name
 SCRIPT_NAME=vpsargup
 
