@@ -203,7 +203,7 @@ byinst="true"
 install_fim () {
 msg -ama "               Finalizando Instalacion" && msg bar2
 [[ $(find /etc/newadm/ger-user -name nombre.log|grep -w "nombre.log"|head -1) ]] || wget -O /etc/newadm/ger-user/nombre.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/nombre.log &>/dev/null
-[[ $(find /etc/newadm/ger-user -name IDT.log|grep -w "IDT.log"|head -1) ]] || wget -O /etc/newadm/ger-user/IDT.log https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/ArchivosUtilitarios/IDT.log &>/dev/null
+[[ $(find /etc/newadm/ger-user -name IDT.log|grep -w "IDT.log"|head -1) ]] || wget -O /etc/newadm/ger-user/IDT.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/IDT.log &>/dev/null
 [[ $(find /etc/newadm/ger-user -name tiemlim.log|grep -w "tiemlim.log"|head -1) ]] || wget -O /etc/newadm/ger-user/tiemlim.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/tiemlim.log &>/dev/null
 
 wget -O /bin/rebootnb https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/rebootnb &> /dev/null
@@ -321,8 +321,8 @@ fun_ip
 wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/trans &> /dev/null
 wget -O /bin/Desbloqueo.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Desbloqueo.sh &> /dev/null
 chmod +x /bin/Desbloqueo.sh
-wget -O /bin/monitor-b.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/Monitor-b.sh &> /dev/null
-chmod +x /bin/monitor-b.sh
+wget -O /bin/Monitor-b.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/Monitor-b.sh &> /dev/null
+chmod +x /bin/Monitor-b.sh
 wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/estilos.css &> /dev/null
 msg -bar2
 msg -bar2
