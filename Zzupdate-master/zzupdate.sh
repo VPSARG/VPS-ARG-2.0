@@ -14,7 +14,7 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
   "-bar2"|"-bar")cor="$MAGENTA}======================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
-rm -rf Instalscript.sh
+rm -rf instalscript.sh
 ## Script name
 SCRIPT_NAME=vpsargup
 
@@ -134,10 +134,10 @@ else
 fi
 
 
-printTitle "Limpieza de caché local"
+        printTitle "Limpieza de caché local"
 apt-get clean
 
-printTitle "Actualizando información de paquetes disponibles"
+        printTitle "Actualizando información de paquetes disponibles"
 apt-get update
 
 printTitle "PAQUETES DE ACTUALIZACIÓN"
@@ -150,12 +150,12 @@ if [ "$VERSION_UPGRADE" = "1" ] && [ "$VERSION_UPGRADE_SILENT" = "1" ]; then
 	
 elif [ "$VERSION_UPGRADE" = "1" ] && [ "$VERSION_UPGRADE_SILENT" = "0" ]; then
 
-	printTitle "Actualice interactivamente a una nueva versión, si hubiera"
+	printTitle "Actualice a una nueva versión, si hubiera"
 	do-release-upgrade
 	
 else
 
-	printTitle "Nueva versión omitida (deshabilitada en la configuración)"
+	printTitle "Nueva versión omitida"
 	
 fi
 
@@ -189,11 +189,12 @@ apt-get autoremove -y
 printTitle "Versión actual"
 lsb_release -d
 
-printTitle "Tiempo que tomó la Actulizacion"
+printTitle "Tiempo que se uso para Actualización"
 echo "$((($(date +%s)-$TIME_START)/60)) min."
 msg -bar2
-echo -e "\033[93m           -- ACTUALIZACIONES CASI COMPLETAS -- "
+echo ""
 echo -e "\033[97m  SU VPS SE REINICIARA PARA FINALIZAR ACTUALIZACIONES"
+echo ""
 msg -bar2
 echo -e "\033[93m      CUANDO REINICIE SU VPS DIGITE LA PALABRA\033[97m"
 echo ""
@@ -201,7 +202,7 @@ echo -e "\033[1;41m                      VPS-ARG                      \033[0;37m
 wget https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/VPS-ARG.sh -O /usr/bin/VPS-ARG &> /dev/null
 chmod +x /usr/bin/VPS-ARG
 if [ "$REBOOT" = "1" ]; then
-	printTitle "        SU VPS REINICIARA EN 15 SEGUNDOS           "
+	printTitle "               SU VPS REINICIARA...          "
 	
 	while [ $REBOOT_TIMEOUT -gt 0 ]; do
 	   echo -ne "                         -$REBOOT_TIMEOUT-\033[0K\r"
