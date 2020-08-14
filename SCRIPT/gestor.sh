@@ -23,7 +23,7 @@ echo
 tput cuu1
 tput dl1
 done
-echo -e " \033[1;33m[\033[1;31m########################################\033[1;33m] - \033[1;32m100%\033[0m"
+echo -e " \033[1;33m[\033[1;31m.........................................\033[1;33m] - \033[1;32m100%\033[0m"
 sleep 1s
 }
 
@@ -93,7 +93,7 @@ return
 }
 
 cambiopass () {
-echo -e "${cor[3]} $(fun_trans "Esta herramienta cambia la contraseña de su servidor vps")"
+echo -e "${cor[3]} $(fun_trans "Esta herramienta cambia la contraseña de su servidor Vps")"
 echo -e "${cor[3]} $(fun_trans "Esta contraseña es utilizada como usuario") root"
 msg -bar
 echo -ne " $(fun_trans "Desea Seguir?") [S/N]: "; read x
@@ -174,9 +174,9 @@ echo -e " FECHA LOCAL ARG APLICADA!"
 gestor_fun () {
 clear
 msg -bar
-echo -e "\033[1;37m       •°•°•°• 🇦🇷 PANEL ARGENTO-VPS •°•°•°•       \033[1;37m"
+echo -e "\033[1;37m       •°•°•°• 🇦🇷--+PANEL ARGENTO---🇦🇷 •°•°•°•       \033[1;37m"
 msg -bar
-echo -e " ${cor[3]}             AJUSTES INTERNOS DEL VPS  "
+echo -e " ${cor[3]}             ----AJUSTES INTERNOS---    "
 msg -bar
 while true; do
 echo -e "${cor[4]} [1] > \033[1;36mACTUALIZAR VPS"
