@@ -927,7 +927,7 @@ Service_SSR(){
 		chkconfig ssrmu on
 	else
 		if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/service/ssrmu_debian -O /etc/init.d/ssrmu; then
-			echo -e "${Error} Fallo la descarga de la secuencia de comandos de administraci�n de servicio de ShadowsocksR!" && exit 1
+			echo -e "${Error} Fallo la descarga de la secuencia de comandos de administracion de servicio de ShadowsocksR!" && exit 1
 		fi
 		chmod +x /etc/init.d/ssrmu
 		update-rc.d -f ssrmu defaults
@@ -1216,7 +1216,7 @@ msg -bar
 Modify_Config(){
 clear
 	SSR_installation_status
-	echo && echo -e "    ###¿Que desea realizar?###Mod By @Kalix1
+	echo && echo -e "    ===¿Que desea realizar?===Mod By ARGENTO
 $(msg -bar)
  ${Green_font_prefix}1.${Font_color_suffix}  Agregar y Configurar Usuario
  ${Green_font_prefix}2.${Font_color_suffix}  Eliminar la Configuracion del Usuario
@@ -1388,7 +1388,7 @@ Clear_transfer(){
 clear
 msg -bar
 	SSR_installation_status
-	 echo -e "Que quieres realizar?
+	 echo -e "===Que quieres realizar? Mod By ARGENTO===
 $(msg -bar)
  ${Green_font_prefix}1.${Font_color_suffix}  Borrar el trafico de un solo usuario
  ${Green_font_prefix}2.${Font_color_suffix}  Borrar todo el trafico de usuarios (irreparable)
