@@ -27,12 +27,12 @@ fun_eth () {
 eth=$(ifconfig | grep -v inet6 | grep -v lo | grep -v 127.0.0.1 | grep "encap:Ethernet" | awk '{print $1}')
     [[ $eth != "" ]] && {
     msg -bar
-    echo -e "${cor[3]} $(fun_trans "Aplicar Mejoras Para Mejorar Paquetes SSH?")"
+    echo -e "${cor[3]} $(fun_trans "¿Aplicar Mejoras Para Paquetes SSH?")"
     echo -e "${cor[3]} $(fun_trans "Opcion Para Usuarios Avanzados")"
     msg -bar
     read -p " [S/N]: " -e -i n sshsn
            [[ "$sshsn" = @(s|S|y|Y) ]] && {
-           echo -e "${cor[1]} $(fun_trans "Correccion de problemas de paquetes en SSH...")"
+           echo -e "${cor[1]} $(fun_trans "Correccion de problemas en paquetes de SSH...")"
            echo -e " $(fun_trans "Cual es la tasa RX")"
            echo -ne "[ 1 - 999999999 ]: "; read rx
            [[ "$rx" = "" ]] && rx="999999999"
@@ -63,7 +63,7 @@ sleep 1s
 echo
 tput cuu1 && tput dl1
 done
-echo -e " \033[1;33m[\033[1;31m####################\033[1;33m] - \033[1;32m100%\033[0m"
+echo -e " \033[1;33m[\033[1;31m....................\033[1;33m] - \033[1;32m100%\033[0m"
 sleep 1s
 }
 fun_dropbear () {
@@ -78,7 +78,7 @@ fun_dropbear () {
  [[ -e /etc/default/dropbear ]] && rm /etc/default/dropbear
  return 0
  }
-echo -e "\033[1;32m $(fun_trans "INSTALADOR DROPBEAR | 🇦🇷 VPS-ARGENTO 🇦🇷")"
+echo -e "\033[1;32m $(fun_trans "INSTALADOR DROPBEAR | 🇦🇷 --ARGENTO-- 🇦🇷")"
 msg -bar
 echo -e "\033[1;31m $(fun_trans "Seleccione Puertos Validados en orden secuencial:")\033[1;32m 22 80 81 82 85 90\033[1;37m"
 msg -bar
