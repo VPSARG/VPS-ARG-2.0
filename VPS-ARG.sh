@@ -33,7 +33,7 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
 ### PAQUETES PRINCIPALES 
 msg -bar
 echo ""
-echo -e "\033[92m -- INSTALANDO CONFIGURACIONES ESENCIALES -- "
+echo -e "\033[92m ------- INSTALANDO CONFIGURACIONES ------- "
 echo ""
 msg -bar
 apt-get install grep -y &>/dev/null
@@ -187,7 +187,7 @@ function_verify () {
   exit 1
   } || {
   ### INSTALAR VERCION DE SCRIPT
-  v1=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version")
+  v1=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Version")
   echo "$v1" > /etc/version_script
   }
 }
@@ -206,11 +206,11 @@ msg -ama "               Finalizando Instalacion" && msg bar2
 [[ $(find /etc/newadm/ger-user -name IDT.log|grep -w "IDT.log"|head -1) ]] || wget -O /etc/newadm/ger-user/IDT.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/IDT.log &>/dev/null
 [[ $(find /etc/newadm/ger-user -name tiemlim.log|grep -w "tiemlim.log"|head -1) ]] || wget -O /etc/newadm/ger-user/tiemlim.log https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/tiemlim.log &>/dev/null
 
-wget -O /bin/rebootnb https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/rebootnb &> /dev/null
+wget -O /bin/rebootnb https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/rebootnb &> /dev/null
 chmod +x /bin/rebootnb 
-wget -O /bin/resetsshdrop https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/resetsshdrop &> /dev/null
+wget -O /bin/resetsshdrop https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/resetsshdrop &> /dev/null
 chmod +x /bin/resetsshdrop
-wget -O /etc/version_script_new https://raw.githhttps://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null
+wget -O /etc/Version_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Version &>/dev/null
 msg -bar2
 echo '#!/bin/sh -e' > /etc/rc.local
 sudo chmod +x /etc/rc.local
@@ -232,7 +232,7 @@ echo 'echo "" '>> .bashrc
 echo 'echo -e "\033[92m        MENSAJE : $mess1 "'>> .bashrc
 echo 'echo "" '>> .bashrc                                               
 echo 'echo -e "\033[97m   PARA INGRESO AL PANEL ESCRIBA: menu  "'>> .bashrc
-echo 'wget -O /etc/version_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Version &>/dev/null'>> .bashrc
+echo 'wget -O /etc/Version_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Version &>/dev/null'>> .bashrc
 echo 'echo ""'>> .bashrc
 echo -e "         COMANDO PRINCIPAL DE INGRESO AL PANEL "
 echo -e "\033[1;41m                  menu                       \033[0;37m" && msg -bar2
@@ -289,14 +289,13 @@ chmod +x ${ARQ}/$1
 
 NOTIFY () {
 msg -bar
-msg -ama " Noti-BOT (Notificaciones Varias)| VPS-ARGENTO | de @Pablo_Ezekiel "
+msg -ama " Noti-BOT (Notificaciones Varias) 🇦🇷| VPS-ARGENTO | 🇦🇷 "
 msg -bar
 echo -e "\033[1;94m Una opcion para notificar cuando\n un usuario sea bloqueado, expirado, e info de VPS."
 echo -e "\033[1;97m Debe usar el BOT de Telegram @NotiBot_VpsArgento_bot"
-echo -e "\033[1;92m Para sacar su ID solo utilice el comando /MENU en el BOT @VPS_ARGENTO_BOT"
-echo -e "\033[1;92m Aparecera un pequeño menu donde mostrara su  👤 ID"
+echo -e "\033[1;92m Para sacar su ID solo el comando /MENU en el BOT @VPS_ARGENTO_BOT"
 msg -bar
-echo -e "\033[1;97mIngrese un nombre para el VPS:\033[0;37m"; read -p " " nombr
+echo -e "\033[1;97mIngrese un nombre del VPS:\033[0;37m"; read -p " " nombr
 echo "${nombr}" > /etc/newadm/ger-user/nombre.log
 echo -e "\033[1;97mIngrese su ID 👤:\033[0;37m"; read -p " " idbot
 echo "${idbot}" > /etc/newadm/ger-user/IDT.log 
@@ -318,15 +317,16 @@ curl -s --max-time 10 -d "chat_id=$IDB2&disable_web_page_preview=1&text=$MSG" $U
 echo -e "\033[1;34mSE ENVIO MENSAJE  SI NO LLEGA CONTACTE A @Pablo_Ezekiel "
 }
 fun_ip
-wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/trans &> /dev/null
-wget -O /bin/Desbloqueo.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Desbloqueo.sh &> /dev/null
+wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/trans &> /dev/null
+wget -O /bin/Desbloqueo.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/Desbloqueo.sh
+ &> /dev/null
 chmod +x /bin/Desbloqueo.sh
-wget -O /bin/Monitor-b.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/Monitor-b.sh &> /dev/null
-chmod +x /bin/Monitor-b.sh
-wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Monitor-Service/estilos.css &> /dev/null
+wget -O /bin/monitor-b.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/Monitor-Service/monitor-b.sh &> /dev/null
+chmod +x /bin/monitor-b.sh
+wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/Monitor-Service/estilos.css &> /dev/null
 msg -bar2
 msg -bar2
-msg -ama "     [ SCRIPT | VPS-ARGENTO \033[1;97m 📲 By @Pablo_Ezekiel📲 \033[1;33m ]"
+msg -ama "     [ SCRIPT | VPS-ARGENTO \033[1;97m 📲 By ARGENTO📲 \033[1;33m ]"
 msg -bar2
 [[ $1 = "" ]] && funcao_idioma || {
 [[ ${#1} -gt 2 ]] && funcao_idioma || id="$1"
@@ -358,7 +358,7 @@ function_verify
 updatedb
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
    msg -bar2
-   msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-ARGENTO | Mod by @Pablo_Ezekiel]"
+   msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-ARGENTO | Mod by VPS-ARG]"
    REQUEST=$(ofus "$Key"|cut -d'/' -f2)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    pontos="."
@@ -381,7 +381,7 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}   
    [[ ${#id} -gt 2 ]] && echo "es" > ${SCPidioma} || echo "${id}" > ${SCPidioma}
    echo -e "${cor[2]}         DESEA INSTALAR NOTI-BOT?(Default n)"
-   echo -e "\033[1;34m  (Debes tener Telegram y el BOT: @VPS_ARGENTO_BOT)"
+   echo -e "\033[1;34m  (Busque y ejecute en Telegram el BOT: @VPS_ARGENTO_BOT)"
    msg -bar2
    read -p " [ s | n ]: " NOTIFY   
    [[ "$NOTIFY" = "s" || "$NOTIFY" = "S" ]] && NOTIFY
