@@ -297,7 +297,7 @@ ENTER_Ban_PORT(){
 	
  -Puerto único: 25 (puerto único)
  
- -Multipuerto: 25, 26, 465, 587 (varios puertos están separados por comas)
+ -Multipuerto: 25, 26, 465, 587 (varios puertos, separados por comas)
 
  -Segmento de puerto continuo: 25: 587 (todos los puertos entre 25-587)" && echo
 	fi
@@ -483,7 +483,7 @@ echo -e "  ${Green_font_prefix}0.${Font_color_suffix} Ver la lista actual de pro
  ${Green_font_prefix}10.${Font_color_suffix} Desbloquear Palabra Clave Personalizadas
  ${Green_font_prefix}11.${Font_color_suffix} Desbloquear Todas las palabras Clave Personalizadas
 ————————————
- ${Green_font_prefix}12.${Font_color_suffix} Actualizar script" && msg -bar2
+ ${Green_font_prefix}12.${Font_color_suffix} Actualizar Script" && msg -bar2
 read -e -p " Por favor ingrese un número [0-12]:" num && msg -bar2
 case "$num" in
 	0)
