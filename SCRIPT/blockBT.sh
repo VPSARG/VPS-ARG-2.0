@@ -466,9 +466,9 @@ if [[ ! -z $action ]]; then
 	[[ $action = "unbanspam" ]] && UnBan_SPAM && exit 0
 	[[ $action = "unbanall" ]] && UnBan_ALL && exit 0
 fi
-echo -e "  Panel de Firewall By 🇦🇷 VPS-ARGENTO 🇦🇷 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}"
+echo -e "  Panel de Firewall By 🇦🇷--ARGENTO--🇦🇷 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}"
 msg -bar2
-echo -e "  ${Green_font_prefix}0.${Font_color_suffix} Ver la lista actual de prohibidos
+echo -e "  ${Green_font_prefix}0.${Font_color_suffix} Ver lista actual de prohibidos
 ————————————
   ${Green_font_prefix}1.${Font_color_suffix} Bloquear Torrent, Palabras Clave
   ${Green_font_prefix}2.${Font_color_suffix} Bloquear Puertos SPAM 
