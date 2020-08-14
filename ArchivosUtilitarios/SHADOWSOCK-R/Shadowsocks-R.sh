@@ -69,7 +69,7 @@ msg -bar
 rm -rf /etc/shadowsocks-r/config.json
 return 0
 }
-echo -e "${cor[3]}  INSTALADOR SHADOWSOCK-R+(obfs) By "
+echo -e "${cor[3]}  INSTALADOR SHADOWSOCK-R+(obfs) By 🇦🇷 ARGENTO 🇦🇷"
 msg -bar
 echo -e "${cor[1]} Escoja la opcion deseada."
 msg -bar
