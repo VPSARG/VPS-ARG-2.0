@@ -14,7 +14,7 @@ echo -e "${cor[4]}  DNS AGREGADOS CON EXITO"
 } 
 clear
 msg -bar2
-echo -e "\033[1;93m     AGREGADOR DE DNS PERSONALES By @VPS_ARGENTO_BOT "
+echo -e "\033[1;93m     AGREGADOR DE DNS PERSONALES "
 msg -bar2
 echo -e "\033[1;39m Esta funcion para que puedas ver Netflix con tu VPS"
 msg -bar2
