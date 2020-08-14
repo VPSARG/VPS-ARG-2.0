@@ -18,17 +18,17 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
   -azu)cor="${MAG}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -verd)cor="${VERDE}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -bra)cor="${VERMELHO}" && echo -ne "${cor}${2}${SEMCOR}";;
-  "-bar2"|"-bar")cor="$AMARELO}==============================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
+  "-bar2"|"-bar")cor="$MAGENTA}==============================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
 clear
  msg -bar2
 echo ""
 
- msg -ama "     [ VPS-ARGENTO \033[1;36m 🔹by @Pablo_Ezekiel🔹\033[1;36m ]"
+ msg -ama "     [ SCRIPT-ARGENTO \033[1;36m 🔹by VPS-ARG🔹\033[1;36m ]"
 
 echo ""
- echo -e  "\033[1;31m        ============= ACTUALIZADORES  =============\033[1;31m "
+ echo -e  "\033[1;31m          ============= ACTUALIZADORES  =============\033[1;31m "
 ## Script name
 SCRIPT_NAME=vpsargup
 ## Install directory
@@ -41,8 +41,7 @@ mkdir -p "/etc/vpsargup/"
 if [ ! -d "$INSTALL_DIR" ]; then
 echo ""
 echo ""
-	echo -e  "\033[1;33m          Ejecutando Paquetes Esenciales"
-	echo "============================================================"
+	echo "==============================================================="
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
 	cd "$INSTALL_DIR_PARENT"
@@ -58,7 +57,7 @@ echo ""
 echo ""
 
 echo ""
-	echo -e  "\033[1;36m          Configurando Instalador Interno "
+	echo -e  "\033[1;36m          Configurando internamente su Vps  "
 	
 	echo "--------------------------------------------------------------"	
 echo ""
@@ -69,22 +68,22 @@ fi
 
 ubu16_fun () {
     wget -O /etc/apt/sources.list https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Repositorios/16.04/sources.list &> /dev/null
-	echo -e "\033[1;33m SELECCIONO “ UBUNTU 16"
+	echo -e "\033[1;33m Usted Selecciono “ UBUNTU 16"
 }
 
 ubu18_fun () {
     wget -O /etc/apt/sources.list https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Repositorios/18.04/sources.list &> /dev/null
-	echo -e "\033[1;33m SELECCIONO “ UBUNTU 18"
+	echo -e "\033[1;33m Usted Selecciono “ UBUNTU 18"
 }	
 
 otro_fun () {
     
-	echo "OK SELECCIONO “ OTRO"
+	echo "Has Seleccionado “ OTRO"
 }
-	echo -e "\033[1;31m           --¿QUE UBUNTU ESTA UTILIZANDO?--"
+	echo -e "\033[1;31m           --¿QUE UBUNTU ESTAS UTILIZANDO?--"
 	
 echo ""
-    echo -e "\033[1;32m Escoja la opcion deseada digitando el numero segun corresponda."
+    echo -e "\033[1;32m Escoja la opcion deseada digitando el numero de respuesta."
 
     msg -bar
 
