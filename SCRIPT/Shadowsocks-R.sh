@@ -69,7 +69,7 @@ msg -bar
 rm -rf /etc/shadowsocks-r/config.json
 return 0
 }
-echo -e "${cor[3]}  INSTALADOR SHADOWSOCK-R+(obfs) VPS-ARGENTO"
+echo -e "${cor[3]}  INSTALADOR SHADOWSOCK-R+(obfs) By 🇦🇷 ARGENTO 🇦🇷"
 msg -bar
 echo -e "${cor[1]} Escoja la opcion deseada."
 msg -bar
@@ -81,7 +81,7 @@ read opcao
 case $opcao in
 1)
 msg -bar
-wget --no-check-certificate -O Instalador-Shadowsocks-R.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Instalador-Shadowsocks-R.sh > /dev/null 2>&1
+wget --no-check-certificate -O Instalador-Shadowsocks-R.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/SHADOWSOCK-R/Instalador-Shadowsocks-R.sh > /dev/null 2>&1
 chmod +x Instalador-Shadowsocks-R.sh
 ./Instalador-Shadowsocks-R.sh 2>&1 | tee Instalador-Shadowsocks-R.log
 
@@ -90,7 +90,7 @@ chmod +x Instalador-Shadowsocks-R.sh
 msg -bar
 echo -e "\033[1;93m  Desinstalar  ..."
 msg -bar
-wget --no-check-certificate -O Instalador-Shadowsocks-R.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/Instalador-Shadowsocks-R.sh > /dev/null 2>&1
+wget --no-check-certificate -O Instalador-Shadowsocks-R.sh https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/SHADOWSOCK-R/Instalador-Shadowsocks-R.sh > /dev/null 2>&1
 chmod +x Instalador-Shadowsocks-R.sh
 ./Instalador-Shadowsocks-R.sh uninstall
 rm -rf Instalador-Shadowsocks-R.sh
