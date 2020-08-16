@@ -40,6 +40,7 @@ mkdir -p "/etc/vpsargup/"
 ## Install/update
 if [ ! -d "$INSTALL_DIR" ]; then
 echo ""
+       echo "=============================================================="
 echo ""
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
@@ -70,7 +71,7 @@ echo -e "\033[1;31m         ----¿ESTA UTILIZANDO UBUNTU ?----"
 echo ""
 	echo "=============================================================="
 echo ""
-    echo -e "\033[1;32m Escoja la opcion deseada digitando el numero 1."
+    echo -e "\033[1;32m Digite el numero 1 para continuar la instalación."
 
     msg -bar
 
