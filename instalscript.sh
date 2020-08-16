@@ -55,8 +55,6 @@ echo ""
 	chmod +x /usr/bin/vpsargup
 
 echo ""
-        echo "=============================================================="
-echo ""
 	echo -e  "\033[1;36m          Configurando internamente su Vps...  "
 	
 	sleep 2
