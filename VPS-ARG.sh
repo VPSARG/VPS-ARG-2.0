@@ -166,9 +166,10 @@ msg -bar2
 echo -e "\033[1;97m <= SI OBTUVO ERRORES DE INSTALACION APLIQUE EL PARCHE =>" 
 msg -bar2
 echo -e "\033[1;32m 1- Escoja:(N) Para Instalacion Normal"
-echo -e "\033[1;31m 2- Escoja:(S) Si ya intento instalar el script y\n presento errores."
+echo "'
+echo -e "\033[1;31m 2- Escoja:(S) Si intento instalar el script y\n presento errores."
 msg -bar2
-echo -e "\033[1;39m Al presionar N continuara la instalacion Normalmente"
+echo -e "\033[1;39m Al digitar "N" continuara la instalacion Normalmente"
 echo ""
 msg -bar2
 read -p " [ S | N ]: " idfix64_86   
@@ -182,19 +183,20 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 function_verify () {
   permited=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
-  echo -e "\n\n\n\033[1;95m======================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! CONTACTE A @Pablo_Ezekiel\n======================================================\n"
+  echo -e "\n\n\n\033[1;95m======================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR!"
+  echo -e "\n\n\n\033[1;95m==================================================CONTACTE A @Pablo_Ezekiel\n"
   [[ -d /etc/newadm ]] && rm -rf /etc/newadm
   exit 1
   } || {
   ### INSTALAR VERCION DE SCRIPT
   v1=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Version")
-  echo "$v1" > /etc/version_script
+  echo "$v1" > /etc/Version_script
   }
 }
 funcao_idioma () {
 msg -bar2
 figlet "    -VPS ARG-" | lolcat 
-echo -e "        SCRIPT OPTIMIZADO A IDIOMA ESPAÑOL"
+echo -e "        SCRIPT MODIFICADO A IDIOMA ESPAÑOL"
 msg -bar2
 pv="$(echo es)"
 [[ ${#id} -gt 2 ]] && id="es" || id="$pv"
