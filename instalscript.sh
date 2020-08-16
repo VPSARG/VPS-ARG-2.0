@@ -18,7 +18,7 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
   -azu)cor="${MAG}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -verd)cor="${VERDE}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -bra)cor="${VERMELHO}" && echo -ne "${cor}${2}${SEMCOR}";;
-  "-bar2"|"-bar")cor="$MAGENTA}=============================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
+  "-bar2"|"-bar")cor="$MAGENTA}===========================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
 clear
@@ -41,7 +41,7 @@ mkdir -p "/etc/vpsargup/"
 if [ ! -d "$INSTALL_DIR" ]; then
 echo ""
 echo ""
-	echo "=============================================================="
+	echo "==========================================================="
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
 	cd "$INSTALL_DIR_PARENT"
@@ -55,7 +55,7 @@ echo ""
 	chmod +x /usr/bin/vpsargup
 
 echo ""
-
+        echo "=============================================================="
 echo ""
 	echo -e  "\033[1;36m          Configurando internamente su Vps...  "
 	
@@ -71,7 +71,8 @@ otro_fun () {
 }
 	echo "=============================================================="
 echo -e "\033[1;31m         ----¿ESTA UTILIZANDO UBUNTU ?----"
-	
+echo ""
+	echo "=============================================================="
 echo ""
     echo -e "\033[1;32m Escoja la opcion deseada digitando el numero 1."
 
