@@ -18,17 +18,17 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
   -azu)cor="${MAG}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -verd)cor="${VERDE}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}";;
   -bra)cor="${VERMELHO}" && echo -ne "${cor}${2}${SEMCOR}";;
-  "-bar2"|"-bar")cor="$MAGENTA}===============================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
+  "-bar2"|"-bar")cor="$MAGENTA}=============================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
 clear
  msg -bar2
 echo ""
 
- msg -ama "      [ SCRIPT-ARGENTO \033[1;36m 🔹by VPS-ARG🔹\033[1;36m ]"
+ msg -ama "         [ SCRIPT-ARGENTO \033[1;36m 🔹by VPS-ARG🔹\033[1;36m ]"
 
 echo ""
- echo -e  "\033[1;31m        ============= ACTUALIZADORES  =============\033[1;31m "
+ echo -e  "\033[1;31m       ============= ACTUALIZADORES  =============\033[1;31m "
 ## Script name
 SCRIPT_NAME=vpsargup
 ## Install directory
@@ -41,7 +41,7 @@ mkdir -p "/etc/vpsargup/"
 if [ ! -d "$INSTALL_DIR" ]; then
 echo ""
 echo ""
-	echo "================================================================="
+	echo "=============================================================="
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
 	cd "$INSTALL_DIR_PARENT"
@@ -62,13 +62,15 @@ echo ""
 	sleep 2
 else
 	echo ""
+        echo "=============================================================="
 fi
 
 otro_fun () {
     
 	echo "Haz Seleccionado UBUNTU"
 }
-	echo -e "\033[1;31m         ----¿ESTA UTILIZANDO UBUNTU ?----"
+	echo "=============================================================="
+echo -e "\033[1;31m         ----¿ESTA UTILIZANDO UBUNTU ?----"
 	
 echo ""
     echo -e "\033[1;32m Escoja la opcion deseada digitando el numero 1."
