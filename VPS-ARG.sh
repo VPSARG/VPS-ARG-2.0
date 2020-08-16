@@ -166,7 +166,7 @@ msg -bar2
 echo -e "\033[1;97m <= SI OBTUVO ERRORES DE INSTALACION APLIQUE EL PARCHE =>" 
 msg -bar2
 echo -e "\033[1;32m 1- Escoja:(N) Para Instalacion Normal"
-echo "'
+echo ""
 echo -e "\033[1;31m 2- Escoja:(S) Si intento instalar el script y\n presento errores."
 msg -bar2
 echo -e "\033[1;39m Al digitar "N" continuara la instalacion Normalmente"
