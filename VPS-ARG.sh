@@ -14,7 +14,7 @@ myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 mkdir -p /etc/B-ADMuser &>/dev/null
 rm -rf /etc/localtime &>/dev/null
-ln -s /usr/share/zoneinfo/America/Argentina_City /etc/localtime &>/dev/null
+ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime &>/dev/null
 rm $(pwd)/$0 &> /dev/null
 ### COLORES Y BARRA 
 msg () {
@@ -255,8 +255,8 @@ case ${txt[$i]} in
 "?")txt[$i]="2";;
 "4")txt[$i]="%";;
 "%")txt[$i]="4";;
-"-")txt[$i]="K";;
-"K")txt[$i]="-";;
+"/")txt[$i]="K";;
+"K")txt[$i]="/";;
 esac
 txtofus+="${txt[$i]}"
 done
