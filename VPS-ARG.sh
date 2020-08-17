@@ -182,8 +182,8 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 function_verify () {
   permited=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
-  echo -e "\n\n\n\033[1;95m======================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR!"
-  echo -e "\n\n\n\033[1;95m==================================================CONTACTE A @Pablo_Ezekiel\n"
+  echo -e "\n\n\n\033[1;95m===================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR!"
+  echo -e "\n\n\n\033[1;95m=====CONTACTE A @Pablo_Ezekiel=====\n"
   [[ -d /etc/newadm ]] && rm -rf /etc/newadm
   exit 1
   } || {
