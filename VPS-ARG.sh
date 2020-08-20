@@ -189,7 +189,7 @@ function_verify () {
 }
 funcao_idioma () {
 msg -bar2
-figlet "    --ARGENTO--" | lolcat 
+figlet "    ARGENTO" | lolcat 
 msg -bar2
 pv="$(echo es)"
 [[ ${#id} -gt 2 ]] && id="es" || id="$pv"
