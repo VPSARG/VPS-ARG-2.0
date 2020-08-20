@@ -25,7 +25,7 @@ clear
  msg -bar2
 echo ""
 
- msg -ama "         [ SCRIPT-ARGENTO \033[1;36m 🔹by VPS-ARG🔹\033[1;36m ]"
+ msg -ama "         [ SCRIPT-ARGENTO \033[1;36m 🔹 VPS-ARG🔹\033[1;36m ]"
 
 echo ""
  echo -e  "\033[1;31m       ============= ACTUALIZADORES  =============\033[1;31m "
@@ -55,7 +55,7 @@ echo ""
 	chmod +x /usr/bin/vpsargup
 
 echo ""
-	echo -e  "\033[1;36m          Configurando internamente su Vps...  "
+	echo -e  "\033[1;36m              Configurando su Vps...  "
 	
 	sleep 2
 else
@@ -64,18 +64,17 @@ fi
 
 otro_fun () {
     
-	echo "Haz Seleccionado UBUNTU"
+	echo "Haz Seleccionado Continuar Instalaciones"
 }
 	echo "=============================================================="
-echo -e "\033[1;31m         ----¿ESTA UTILIZANDO UBUNTU ?----"
+echo -e "\033[1;31m 🔹Recomendado utilizar Ubuntu 18 a 64 🔹 "
+msg -bar2
 echo ""
-	echo "=============================================================="
-echo ""
-    echo -e "\033[1;32m Digite el numero 1 para continuar la instalación."
+    echo -e "\033[1;32m Digite el 1 para continuar instalación."
 
     msg -bar
 
-    echo " 1).- Otro "
+    echo " 1).- CONTINUAR INSTALACIONES COMPLEMENTARIAS "
 
 	msg -bar
 
