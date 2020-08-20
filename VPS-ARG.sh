@@ -163,15 +163,10 @@ export LANGUAGE=en_US.UTF-8\
 clear
 }
 msg -bar2
-echo -e "\033[1;97m <= SI OBTUVO ERRORES DE INSTALACION APLIQUE EL PARCHE =>" 
+echo -e "\033[1;31m 2- Escoja:(S) para continuar instalaciones Necesarias."
 msg -bar2
-echo -e "\033[1;32m 1- Escoja:(N) Para Instalacion Normal"
-echo -e "\033[1;31m 2- Escoja:(S) Si intento instalar el script y\n presento errores."
-msg -bar2
-echo -e "\033[1;39m Al digitar "N" continuara la instalacion Normalmente"
 echo ""
-msg -bar2
-read -p " [ S | N ]: " idfix64_86   
+read -p " [ S ]: " idfix64_86   
 [[ "$idfix64_86" = "s" || "$idfix64_86" = "S" ]] && idfix64_86
 clear
 fun_ip () {
@@ -183,7 +178,7 @@ function_verify () {
   permited=$(curl -sSL "https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   echo -e "\n\n\n\033[1;95m===================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR!"
-  echo -e "\n\n\n\033[1;95m=====CONTACTE A @Pablo_Ezekiel=====\n"
+  echo -e "\n\n\n\033[1;95m📲 CONTACTE A @Pablo_Ezekiel 📲\n"
   [[ -d /etc/newadm ]] && rm -rf /etc/newadm
   exit 1
   } || {
@@ -194,8 +189,7 @@ function_verify () {
 }
 funcao_idioma () {
 msg -bar2
-figlet "    -VPS ARG-" | lolcat 
-echo -e "        SCRIPT MODIFICADO A IDIOMA ESPAÑOL"
+figlet "    --ARGENTO--" | lolcat 
 msg -bar2
 pv="$(echo es)"
 [[ ${#id} -gt 2 ]] && id="es" || id="$pv"
@@ -232,10 +226,10 @@ echo 'mess1="$(less /etc/newadm/message.txt)" ' >> .bashrc
 echo 'echo "" '>> .bashrc
 echo 'echo -e "\033[92m        MENSAJE : $mess1 "'>> .bashrc
 echo 'echo "" '>> .bashrc                                               
-echo 'echo -e "\033[97m   PARA INGRESO AL PANEL ESCRIBA: menu  "'>> .bashrc
+echo 'echo -e "\033[97m   PARA ADMINISTRAR VPS DIGITE: menu  "'>> .bashrc
 echo 'wget -O /etc/Version_script_new https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/Version &>/dev/null'>> .bashrc
 echo 'echo ""'>> .bashrc
-echo -e "         COMANDO PRINCIPAL DE INGRESO AL PANEL "
+echo -e "             INGRESO AL PANEL DIGITE "
 echo -e "\033[1;41m                  menu                       \033[0;37m" && msg -bar2
 sleep 5
 }
@@ -294,9 +288,8 @@ msg -ama " Noti-BOT (Notificaciones Varias) 🇦🇷| VPS-ARGENTO | 🇦🇷 "
 msg -bar
 echo -e "\033[1;94m Una opcion para notificar cuando\n un usuario sea bloqueado, expirado, e info de VPS."
 echo -e "\033[1;97m Debe usar el BOT de Telegram @NotiBot_VpsArgento_bot"
-echo -e "\033[1;92m Para sacar su ID solo el comando /MENU en el BOT @VPS_ARGENTO_BOT"
 msg -bar
-echo -e "\033[1;97mIngrese un nombre del VPS:\033[0;37m"; read -p " " nombr
+echo -e "\033[1;97mIngrese nombre del VPS:\033[0;37m"; read -p " " nombr
 echo "${nombr}" > /etc/newadm/ger-user/nombre.log
 echo -e "\033[1;97mIngrese su ID 👤:\033[0;37m"; read -p " " idbot
 echo "${idbot}" > /etc/newadm/ger-user/IDT.log 
@@ -311,11 +304,11 @@ IDB2=`echo $IDB1` > /dev/null 2>&1
 KEY="1189753277:AAE_Qk5JhiFVrUDcHDtM1VNWpOvHe-eYOT4"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 MSG="📲 AVISO DE VPS: $NOM1 📲
-👉 MENSAJE DE PRUEBA
-✔️ EXITOSO...✔️ SALUDOS"
+📨 MENSAJE DE PRUEBA Noti-Bot 📨
+✔️ EXITOSO... SALUDOS"
 curl -s --max-time 10 -d "chat_id=$IDB2&disable_web_page_preview=1&text=$MSG" $URL &>/dev/null
 
-echo -e "\033[1;34mSE ENVIO MENSAJE  SI NO LLEGA CONTACTE A @Pablo_Ezekiel "
+echo -e "\033[1;34mSE ENVIO MENSAJE,  SI NO LLEGA CONTACTE A @Pablo_Ezekiel "
 }
 fun_ip
 wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/trans &> /dev/null
@@ -326,13 +319,13 @@ chmod +x /bin/monitor-b.sh
 wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/Monitor-Service/estilos.css &> /dev/null
 msg -bar2
 msg -bar2
-msg -ama "     [ SCRIPT | VPS-ARGENTO \033[1;97m 📲 By ARGENTO📲 \033[1;33m ]"
+msg -ama "     [ SCRIPT | ARGENTO \033[1;97m 📲 By ARGENTO📲 \033[1;33m ]"
 msg -bar2
 [[ $1 = "" ]] && funcao_idioma || {
 [[ ${#1} -gt 2 ]] && funcao_idioma || id="$1"
  }
 error_fun () {
-msg -bar2 && msg -verm "ERROR de enlace VPS<-->GENERADOR" && msg -bar2
+msg -bar2 && msg -verm "ERROR de enlace VPS/GENERADOR" && msg -bar2
 [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
 exit 1
 }
@@ -358,7 +351,7 @@ function_verify
 updatedb
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
    msg -bar2
-   msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-ARGENTO | Mod by VPS-ARG]"
+   msg -verd "$(source trans -b es:${id} " INSTALANDO"|sed -e 's/[^a-z -]//ig'): \033[1;31m[VPS-ARGENTO | Mod By Ezekiel]"
    REQUEST=$(ofus "$Key"|cut -d'/' -f2)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    pontos="."
@@ -381,7 +374,7 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}   
    [[ ${#id} -gt 2 ]] && echo "es" > ${SCPidioma} || echo "${id}" > ${SCPidioma}
    echo -e "${cor[2]}         DESEA INSTALAR NOTI-BOT?(Default n)"
-   echo -e "\033[1;34m  (Busque y ejecute en Telegram el BOT: @VPS_ARGENTO_BOT)"
+   echo -e "\033[1;34m  (Busque en Telegram el BOT: @NotiBot_VpsArgento_bot)"
    msg -bar2
    read -p " [ s | n ]: " NOTIFY   
    [[ "$NOTIFY" = "s" || "$NOTIFY" = "S" ]] && NOTIFY
