@@ -5,8 +5,8 @@ SCPfrm="/etc/ger-frm" && [[ ! -d ${SCPfrm} ]] && exit
 SCPinst="/etc/ger-inst" && [[ ! -d ${SCPinst} ]] && exit
 intallv2ray () {
 apt install python3-pip -y 
-source <(curl -sL https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/ArchivosUtilitarios/V2RAY/install.sh)
-msg -ama "$(fun_trans "Intalado con Exito")!"
+source <(curl -sL https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/V2RAY/install.sh)
+msg -ama "$(fun_trans "Instalado con Exito")!"
 }
 protocolv2ray () {
 msg -ama "$(fun_trans "Escojer opcion 3 y poner el dominio de nuestra IP")!"
@@ -28,7 +28,7 @@ echo ""
 v2ray tls
 }
 unistallv2 () {
-source <(curl -sL https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/ArchivosUtilitarios/V2RAY/install.sh) --remove
+source <(curl -sL https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/V2RAY/install.sh) --remove
 }
 infocuenta () {
 v2ray info
